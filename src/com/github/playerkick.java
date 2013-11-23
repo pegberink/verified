@@ -1,9 +1,12 @@
 package com.github;
 
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerLoginEvent;
 
-public class playerkick {
+public class playerkick implements Listener {
+		@EventHandler
 	    public void onPlayerLoginEvent(PlayerLoginEvent event){
 		Player p = event.getPlayer();
 		p.kickPlayer("Code = ");
